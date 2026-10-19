@@ -24,6 +24,7 @@
     "@neton/application-front-resource": "file:../deviceadmin-frontend/packages/front-resource",
     "@neton/application-front-runtime": "file:../deviceadmin-frontend/packages/front-runtime",
     "@neton/application-front-workspace": "file:../deviceadmin-frontend/packages/front-workspace",
+    "@types/node": "^26.6.5",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "react": "^19.2.0",
