@@ -23,7 +23,7 @@ const messages: Record<string, string> = {
 
   "field.id": "ID",
   "field.name": "Name",
-  "field.code": "Code",
+  "field.code": "Org Code",
   "field.ownerAccountId": "Owner Account",
   "field.status": "Status",
   "field.createdAt": "Created At",
@@ -56,8 +56,8 @@ const messages: Record<string, string> = {
   "orgCreate.title": "Create Organization",
   "orgCreate.submit": "Confirm create",
   "orgCreate.namePlaceholder": "e.g. Acme Inc.",
-  "orgCreate.codePlaceholder": "Optional, globally unique",
-  "orgCreate.codeHint": "Leave empty for no organization code; if set it must be globally unique.",
+  "orgCreate.codePlaceholder": "Required, globally unique, e.g. shang",
+  "orgCreate.codeHint": "Required. 2-20 chars, starts with a lowercase letter, only lowercase letters/digits/underscore; it is the prefix of sub-account usernames (e.g. code shang → sub-accounts shang1, shang2).",
   "orgCreate.ownerMode": "Owner account",
   "orgCreate.ownerModeNew": "Create new owner account",
   "orgCreate.ownerModeExisting": "Use existing account",
@@ -67,6 +67,8 @@ const messages: Record<string, string> = {
   "orgCreate.nicknamePlaceholder": "Defaults to the username",
   "orgCreate.ownerAccountIdHint": "Pick an existing account ID to be the owner.",
   "orgCreate.nameRequired": "Organization name is required.",
+  "orgCreate.codeRequired": "Organization code is required.",
+  "orgCreate.codeInvalid": "Organization code format: 2-20 chars, starts with a lowercase letter, only lowercase letters/digits/underscore.",
   "orgCreate.ownerRequired": "Owner username is required and password must be at least 8 characters.",
   "orgCreate.ownerAccountIdRequired": "A valid owner account ID is required.",
 

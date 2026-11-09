@@ -27,7 +27,7 @@ const messages: Record<string, string> = {
   // 字段
   "field.id": "编号",
   "field.name": "组织名称",
-  "field.code": "组织编码",
+  "field.code": "组织标识",
   "field.ownerAccountId": "主账号 ID",
   "field.status": "状态",
   "field.createdAt": "创建时间",
@@ -65,8 +65,8 @@ const messages: Record<string, string> = {
   "orgCreate.title": "创建组织",
   "orgCreate.submit": "确认创建",
   "orgCreate.namePlaceholder": "例如 Acme Inc.",
-  "orgCreate.codePlaceholder": "可选，全局唯一",
-  "orgCreate.codeHint": "留空表示不设组织编码；非空则要求全局唯一。",
+  "orgCreate.codePlaceholder": "必填，全局唯一，例如 shang",
+  "orgCreate.codeHint": "必填。2-20 位，小写字母开头，仅小写字母/数字/下划线；它是子账号登录名的前缀（如标识 shang → 子账号 shang1、shang2）。",
   "orgCreate.ownerMode": "负责人账号",
   "orgCreate.ownerModeNew": "新建负责人账号",
   "orgCreate.ownerModeExisting": "使用已有账号",
@@ -76,6 +76,8 @@ const messages: Record<string, string> = {
   "orgCreate.nicknamePlaceholder": "留空则用账号名",
   "orgCreate.ownerAccountIdHint": "选定一个已存在的账号 ID 作为负责人。",
   "orgCreate.nameRequired": "请填写组织名称。",
+  "orgCreate.codeRequired": "请填写组织标识。",
+  "orgCreate.codeInvalid": "组织标识格式：2-20 位，小写字母开头，仅小写字母/数字/下划线。",
   "orgCreate.ownerRequired": "请填写负责人账号名，密码至少 8 位。",
   "orgCreate.ownerAccountIdRequired": "请填写有效的负责人账号 ID。",
 

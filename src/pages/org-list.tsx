@@ -83,7 +83,7 @@ export default function Page() {
     mutationFn: () => {
       const body: Record<string, unknown> = {
         name: form.name.trim(),
-        code: form.code.trim(),
+        code: form.code.trim().toLowerCase(),
         remark: form.remark.trim(),
       };
       if (ownerMode === "existing") {
@@ -107,6 +107,9 @@ export default function Page() {
     event.preventDefault();
     setError(null);
     if (!form.name.trim()) { setError(t("orgCreate.nameRequired")); return; }
+    const code = form.code.trim().toLowerCase();
+    if (!code) { setError(t("orgCreate.codeRequired")); return; }
+    if (!/^[a-z][a-z0-9_]{1,19}$/.test(code)) { setError(t("orgCreate.codeInvalid")); return; }
     if (ownerMode === "new") {
       if (!form.ownerUsername.trim() || form.ownerPassword.length < 8) { setError(t("orgCreate.ownerRequired")); return; }
     } else if (!(Number(form.ownerAccountId) > 0)) {
