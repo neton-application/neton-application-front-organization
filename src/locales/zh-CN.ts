@@ -22,6 +22,7 @@ const messages: Record<string, string> = {
   "action.assign": "批量分配",
   "action.changeRole": "改角色",
   "action.remove": "移除",
+  "action.create": "创建组织",
 
   // 字段
   "field.id": "编号",
@@ -36,6 +37,9 @@ const messages: Record<string, string> = {
   "field.role": "角色",
   "field.source": "来源",
   "field.joinedAt": "加入时间",
+  "field.ownerUsername": "负责人账号名",
+  "field.ownerPassword": "负责人密码",
+  "field.ownerNickname": "负责人昵称",
 
   // 组织状态
   "status.0": "停用",
@@ -54,8 +58,26 @@ const messages: Record<string, string> = {
 
   // 组织列表页
   "orgList.title": "组织列表",
-  "orgList.description": "全局治理所有组织：启用/停用、删除，并进入其成员做批量分配。",
+  "orgList.description": "创建组织并初始化负责人账号；全局治理所有组织：启用/停用、删除，并进入其成员做批量分配。",
   "orgList.deleteConfirm": "删除会级联软删该组织的全部成员，组织本体不再展示。",
+
+  // 创建组织（§7.1：后台建组织 + 一体初始化负责人账号）
+  "orgCreate.title": "创建组织",
+  "orgCreate.submit": "确认创建",
+  "orgCreate.namePlaceholder": "例如 Acme Inc.",
+  "orgCreate.codePlaceholder": "可选，全局唯一",
+  "orgCreate.codeHint": "留空表示不设组织编码；非空则要求全局唯一。",
+  "orgCreate.ownerMode": "负责人账号",
+  "orgCreate.ownerModeNew": "新建负责人账号",
+  "orgCreate.ownerModeExisting": "使用已有账号",
+  "orgCreate.ownerHint": "负责人账号由后台初始化，登录后即该组织主账号（OWNER），可为本组织添加成员。",
+  "orgCreate.usernameHint": "3-32 位，小写字母开头，仅小写字母/数字/下划线。",
+  "orgCreate.passwordHint": "至少 8 位。",
+  "orgCreate.nicknamePlaceholder": "留空则用账号名",
+  "orgCreate.ownerAccountIdHint": "选定一个已存在的账号 ID 作为负责人。",
+  "orgCreate.nameRequired": "请填写组织名称。",
+  "orgCreate.ownerRequired": "请填写负责人账号名，密码至少 8 位。",
+  "orgCreate.ownerAccountIdRequired": "请填写有效的负责人账号 ID。",
 
   // 组织成员页
   "memberList.title": "组织成员",
